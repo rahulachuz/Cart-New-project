@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+#nav-bar {
+  margin: 0;
+  padding: 0;
+}
+#inputBox {
+  background-color: rgb(188, 190, 192);
+}
+.hoverpointer{
+  cursor: pointer;
+}
