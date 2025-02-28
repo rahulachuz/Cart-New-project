@@ -9,11 +9,7 @@ function ApiFetch() {
   useEffect(() => {
     const fetchApi = async () => {
       try {
-        const response = await axios.get("https://fakestoreapi.com/products", {
-          headers: {
-            Accept: "application/json",
-          },
-        });
+        const response = await axios.get("https://fakestoreapi.com/products");
         setData(response.data);
       } catch (error) {
         console.log("Error Fetching", error);
@@ -36,7 +32,7 @@ function ApiFetch() {
       <div className="flex justify-end p-5 relative">
         <button
           onClick={() => setCartVisible(!cartVisible)}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg hoverpointer "
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:pointer "
         >
           🛒 Cart ({cart.length})
         </button>
@@ -96,7 +92,7 @@ function ApiFetch() {
               <div className="py-3">
                 <button
                   onClick={() => addToCart(item)}
-                  className="hoverpointer bg-yellow-300 px-4 py-2 font-semibold rounded transition
+                  className="hover:pointer bg-yellow-300 px-4 py-2 font-semibold rounded transition
                  duration-300 ease-in-out transform hover:bg-yellow-400 hover:scale-105"
                 >
                   Add To Cart
